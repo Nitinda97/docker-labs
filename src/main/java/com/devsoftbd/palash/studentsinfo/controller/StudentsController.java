@@ -31,7 +31,7 @@ public class StudentsController {
 	public String addStudents(Model model) {
 		model.addAttribute("pageTitle", "Students | Add");
 		model.addAttribute("departmentsList", deparmentService.getList());
-		return "students/add";
+		return "students/add-student";
 	}
 
 	@PostMapping(value = "/add")

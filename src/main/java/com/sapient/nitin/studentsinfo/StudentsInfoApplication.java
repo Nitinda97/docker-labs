@@ -1,4 +1,4 @@
-package com.devsoftbd.palash.studentsinfo;
+package com.sapient.nitin.studentsinfo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.devsoftbd.palash.studentsinfo.controller;
+package com.sapient.nitin.studentsinfo.controller;
 
 import javax.validation.Valid;
 
@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.devsoftbd.palash.studentsinfo.model.StudentsModel;
-import com.devsoftbd.palash.studentsinfo.serviceImpl.DepartmentsServiceImpl;
-import com.devsoftbd.palash.studentsinfo.serviceImpl.StudentsServiceImpl;
+import com.sapient.nitin.studentsinfo.model.StudentsModel;
+import com.sapient.nitin.studentsinfo.serviceImpl.DepartmentsServiceImpl;
+import com.sapient.nitin.studentsinfo.serviceImpl.StudentsServiceImpl;
 
 @RequestMapping(value = "students")
 @Controller

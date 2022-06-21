@@ -1,4 +1,4 @@
-package com.devsoftbd.palash.studentsinfo.model;
+package com.sapient.nitin.studentsinfo.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,12 +1,12 @@
-package com.devsoftbd.palash.studentsinfo.serviceImpl;
+package com.sapient.nitin.studentsinfo.serviceImpl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.devsoftbd.palash.studentsinfo.model.StudentsModel;
-import com.devsoftbd.palash.studentsinfo.repository.StudentsRepository;
+import com.sapient.nitin.studentsinfo.model.StudentsModel;
+import com.sapient.nitin.studentsinfo.repository.StudentsRepository;
 
 @Service
 public class StudentsServiceImpl {

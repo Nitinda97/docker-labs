@@ -1,4 +1,4 @@
-package com.devsoftbd.palash.studentsinfo;
+package com.sapient.nitin.studentsinfo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,0 +1,9 @@
+/home/nitin/gitproject/docker-labs/spring-boot-app/src/main/java/com/sapient/nitin/studentsinfo/repository/DepartmentsRepository.java
+/home/nitin/gitproject/docker-labs/spring-boot-app/src/main/java/com/sapient/nitin/studentsinfo/model/StudentsModel.java
+/home/nitin/gitproject/docker-labs/spring-boot-app/src/main/java/com/sapient/nitin/studentsinfo/StudentsInfoApplication.java
+/home/nitin/gitproject/docker-labs/spring-boot-app/src/main/java/com/sapient/nitin/studentsinfo/repository/StudentsRepository.java
+/home/nitin/gitproject/docker-labs/spring-boot-app/src/main/java/com/sapient/nitin/studentsinfo/serviceImpl/StudentsServiceImpl.java
+/home/nitin/gitproject/docker-labs/spring-boot-app/src/main/java/com/sapient/nitin/studentsinfo/model/DepartmentsModel.java
+/home/nitin/gitproject/docker-labs/spring-boot-app/src/main/java/com/sapient/nitin/studentsinfo/service/StudentsService.java
+/home/nitin/gitproject/docker-labs/spring-boot-app/src/main/java/com/sapient/nitin/studentsinfo/controller/StudentsController.java
+/home/nitin/gitproject/docker-labs/spring-boot-app/src/main/java/com/sapient/nitin/studentsinfo/serviceImpl/DepartmentsServiceImpl.java

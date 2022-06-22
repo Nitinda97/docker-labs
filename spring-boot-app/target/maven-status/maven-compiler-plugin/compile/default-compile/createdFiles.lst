@@ -1,0 +1,9 @@
+com/sapient/nitin/studentsinfo/serviceImpl/DepartmentsServiceImpl.class
+com/sapient/nitin/studentsinfo/repository/DepartmentsRepository.class
+com/sapient/nitin/studentsinfo/StudentsInfoApplication.class
+com/sapient/nitin/studentsinfo/model/StudentsModel.class
+com/sapient/nitin/studentsinfo/serviceImpl/StudentsServiceImpl.class
+com/sapient/nitin/studentsinfo/service/StudentsService.class
+com/sapient/nitin/studentsinfo/controller/StudentsController.class
+com/sapient/nitin/studentsinfo/repository/StudentsRepository.class
+com/sapient/nitin/studentsinfo/model/DepartmentsModel.class

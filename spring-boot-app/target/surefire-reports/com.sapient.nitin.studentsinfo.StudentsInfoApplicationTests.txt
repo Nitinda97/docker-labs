@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.sapient.nitin.studentsinfo.StudentsInfoApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.874 s - in com.sapient.nitin.studentsinfo.StudentsInfoApplicationTests

@@ -1,0 +1,6 @@
+FROM python
+RUN apt-get update
+ADD fibonacci.py /home/fibonacci.py
+ADD prime.py /home/prime.py
+CMD ["/home/fibonacci.py"]
+ENTRYPOINT ["python3"]

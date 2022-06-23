@@ -2,12 +2,17 @@
 #ansy playbook start with three dash
 -
 ###this minus in yaml indicate a list of items. the play contains a list of play
-  hosts: redhatvm
+  hosts: redhatvm1
   vars:
     container_count: 1
     default_container_name: sapient 
-    default_container_image: nitindadev/studentapp:v1
+    default_container_image: "nitindadev/studentapp:v1"
     default_container_command: sleep 1
+    packages:
+      - "docker-ce"
+      - "docker-ce-cli"
+      - "containerd.io"
+      - "docker-compose-plugin"
   tasks:
     - name: install yum utils
       yum:
@@ -15,38 +20,37 @@
         state: latest
         update_cache: true
 
-    - name: add docker gpg key
-      rpm_key:
-        url: https://download.docker.com/linux/rhel/gpg
-        state: present 
-
-    - name: download docker repo 
-      yum_repository: 
-        baseurl: https://download.docker.com/linux/rhel/docker-ce.repo
-        enabled: true
-        gpgcheck: true
-        gpgkey: https://download.docker.com/linux/rhel/gpg
+    - name: add docker repo
+      get_url:
+        url: https://download.docker.com/linux/centos/docker-ce.repo
+        dest: /etc/yum.repos.d/docker-ce.repo
 
     - name: install docker package 
       yum: 
-        name: 
-          - docker-ce
-          - docker-ce-cli
-          - containerd.io 
-          - docker-compose-plugin
+        name: "{{ packages }}"
         state: latest 
-        update_cache: true 
+        update_cache: true
 
     - name: Start Docker
       service:
         name: "docker"
         enabled: true
         state: started    
-  
+         
+    - name: install python pip package
+      yum:
+        name: python3-pip
+        state: present
+
+    - name: install docker module for python
+      pip:
+        name: docker
+
     - name: download the docker image
       docker_image:
         name: "{{default_container_image}}"
         source: pull 
+
     - name: run the docker container 
       docker_container:
         name: "{{default_container_name}}{{item}}"

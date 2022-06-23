@@ -1,0 +1,6 @@
+In this we have created our first docker-compose file:
+in this we have downloaded nitindadev/nginxapp:v2 from the dockerhub
+we can run it using the command:
+docker compose up -d 
+to stop the containers
+docker compose down

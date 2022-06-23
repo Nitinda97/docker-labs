@@ -1,0 +1,55 @@
+---
+#ansy playbook start with three dash
+-
+###this minus in yaml indicate a list of items. the play contains a list of play
+  hosts: redhatvm
+  vars:
+    container_count: 1
+    default_container_name: sapient 
+    default_container_image: nitindadev/studentapp:v1
+    default_container_command: sleep 1
+  tasks:
+    - name: install yum utils
+      yum:
+        name: yum-utils
+        state: latest
+        update_cache: true
+
+    - name: add docker gpg key
+      rpm_key:
+        url: https://download.docker.com/linux/rhel/gpg
+        state: present 
+
+    - name: download docker repo 
+      yum_repository: 
+        baseurl: https://download.docker.com/linux/rhel/docker-ce.repo
+        enabled: true
+        gpgcheck: true
+        gpgkey: https://download.docker.com/linux/rhel/gpg
+
+    - name: install docker package 
+      yum: 
+        name: 
+          - docker-ce
+          - docker-ce-cli
+          - containerd.io 
+          - docker-compose-plugin
+        state: latest 
+        update_cache: true 
+
+    - name: Start Docker
+      service:
+        name: "docker"
+        enabled: true
+        state: started    
+  
+    - name: download the docker image
+      docker_image:
+        name: "{{default_container_image}}"
+        source: pull 
+    - name: run the docker container 
+      docker_container:
+        name: "{{default_container_name}}{{item}}"
+        image: "{{default_container_image}}"
+        command: "{{default_container_command}}"
+      with_sequence: count={{container_count}}
